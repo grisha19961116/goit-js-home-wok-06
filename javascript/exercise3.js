@@ -1,41 +1,13 @@
+import users from './users.js'
 // Завдання 3
-// Напиши клас Storage, який буде створювати об'єкти для управління складом товарів.
-//  При виклику буде отримувати один аргумент - початковий масив товарів,
-//   і записувати його у властивість items.
+// Отримати масив імен користувачів за статтю (поле gender).
 
-// Додай методи класу:
-class Storage {
-constructor(massive){
-  this.massive = massive;
-  }
-  getItems(){
-    return this.massive;
-  }
-  addItem(item){
-    return this.massive.push(item);
-  }
-  removeItem(item){
-    const index = this.massive.indexOf(item);
-    if (index > -1){
-      return this.massive.splice(index,1);
-    }
-  }
-}
-// getItems() - повертає масив поточних товарів
-// addItem(item) - отримує новий товар і додає його до поточних
-// removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних
-const storage = new Storage([
-  'Нанітоіди',
-  'Пролонгер',
-  'Залізні жупи',
-  'Антигравітатор',
-]);
+const getUsersWithGender = (users, gen) => {
+  const findPerState =users.filter(users => users.gender === gen).map(tipe => tipe.name);
+  // users.reduce((acc,gen) => acc + gen.gender,[])
+  return findPerState;
+  // твій код
+};
 
-const items = storage.getItems();
-console.table(items); // [ "Нанітоіди", "Пролонгер", "Залізні жупи", "Антигравітатор" ]
-
-storage.addItem('Дроїд');
-console.table(items); // [ "Нанітоіди", "Пролонгер", "Залізні жупи", "Антигравітатор", "Дроїд" ]
-
-storage.removeItem('Пролонгер');
-console.table(items); // [ "Нанітоіди", "Залізні жупи", "Антигравітатор", "Дроїд" ]
+console.log(getUsersWithGender(users, 'male'));
+ // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
