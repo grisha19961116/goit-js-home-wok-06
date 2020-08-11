@@ -14,14 +14,13 @@ const getSortedUniqueSkills = users => {
     //     }
     //     return 0;
     // }).map(tipe => tipe.skills);
-    const sorting = users.map(user => user.skills).forEach((num, idx) => {
-    if(num.includes(idx)){
-        num.splice(idx,1)
-    }
-     console.log(`index ${idx}, value ${num}`)}
-     );;
-
-    return sorting;
+    const sorting = users.reduce((allSkills, element) => {
+      allSkills.push(...element.skills);
+      return allSkills;
+    }, [])
+     .sort();
+const sortDelet = Array.from(new Set(sorting));
+    return sortDelet;
   // твій код
 };
 
