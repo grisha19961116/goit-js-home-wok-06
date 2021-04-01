@@ -1,13 +1,12 @@
-import users from './users.js'
-// Завдання 4
-// Отримати масив тільки неактивних користувачів (поле isActive).
+import users from "./users.js";
+// Exercise 4 get massive only not active users by field isActive.
 
-const getInactiveUsers = users => {
-  const isNotActive = users.filter(user => !user.isActive).map(tipe => [tipe.name]);
-  // зрозумів так,обєкт з обєктами [name]!
+const getInactiveUsers = (users) => {
+  const isNotActive = users
+    .filter((user) => !user.isActive)
+    .map((el) => [el.name]);
   return isNotActive;
-  // твій код
 };
 
-console.log(getInactiveUsers(users)); 
+console.log(getInactiveUsers(users));
 // [об'єкт Moore Hensley, об'єкт Ross Vazquez, об'єкт Blackburn Dotson]

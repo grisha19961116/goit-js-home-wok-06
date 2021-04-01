@@ -1,14 +1,12 @@
-import users from './users.js'
-// Завдання 5
-// Отримати користувача (не масив) по email (поле email, він унікальний).
+import users from "./users.js";
+// Exercise 5 get user (not massive) by field email (email is unique).
 
 const getUserWithEmail = (users, email) => {
-  const fiendEmail = users.find(user => user.email === email);
+  const fiendEmail = users.find((user) => user.email === email);
   return fiendEmail;
-  // твій код
 };
 
-console.log(getUserWithEmail(users, 'shereeanthony@kog.com')); 
+console.log(getUserWithEmail(users, "shereeanthony@kog.com"));
 // {об'єкт користувача Sheree Anthony}
-console.log(getUserWithEmail(users, 'elmahead@omatom.com'));
- // {об'єкт користувача Elma Head}
+console.log(getUserWithEmail(users, "elmahead@omatom.com"));
+// {об'єкт користувача Elma Head}

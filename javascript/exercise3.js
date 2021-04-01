@@ -1,13 +1,12 @@
-import users from './users.js'
-// Завдання 3
-// Отримати масив імен користувачів за статтю (поле gender).
+import users from "./users.js";
+// Exercise 3 get massive users names by filed gender.
 
 const getUsersWithGender = (users, gen) => {
-  const findPerState =users.filter(users => users.gender === gen).map(tipe => tipe.name);
-  // users.reduce((acc,gen) => acc + gen.gender,[])
-  return findPerState;
-  // твій код
+  const foundGender = users
+    .filter((users) => users.gender === gen)
+    .map((el) => el.name);
+  return foundGender;
 };
 
-console.log(getUsersWithGender(users, 'male'));
- // [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]
+console.log(getUsersWithGender(users, "male"));
+// [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]

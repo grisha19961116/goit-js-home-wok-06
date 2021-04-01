@@ -1,12 +1,10 @@
-import users from './users.js'
-// Завдання 2
-// Отримати масив об'єктів користувачів за кольором очей (поле eyeColor).
+import users from "./users.js";
+// Exercise 2 get massive users arrays by eyeColor.
 
 const getUsersWithEyeColor = (users, color) => {
-  const findEye = users.filter(user => user.eyeColor === color);
+  const findEye = users.filter((user) => user.eyeColor === color);
   return findEye;
-  // твій код
 };
 
-console.log(getUsersWithEyeColor(users, 'blue')); 
+console.log(getUsersWithEyeColor(users, "blue"));
 // [об'єкт Moore Hensley, об'єкт Sharlene Bush, об'єкт Carey Barr]
