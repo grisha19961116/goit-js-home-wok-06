@@ -9,4 +9,4 @@ const getInactiveUsers = (users) => {
 };
 
 console.log(getInactiveUsers(users));
-// [об'єкт Moore Hensley, об'єкт Ross Vazquez, об'єкт Blackburn Dotson]
+// [arrayMoore Hensley, array Ross Vazquez, array Blackburn Dotson]

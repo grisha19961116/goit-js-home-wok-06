@@ -6,7 +6,6 @@ const getUsersWithFriend = (users, friendName) => {
     .filter((user) => user.friends.includes(friendName))
     .map((el) => el.name);
   return whoHasFriend;
-  // твій код
 };
 
 console.log(getUsersWithFriend(users, "Briana Decker")); // [ 'Sharlene Bush', 'Sheree Anthony' ]

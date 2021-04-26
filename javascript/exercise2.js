@@ -7,4 +7,4 @@ const getUsersWithEyeColor = (users, color) => {
 };
 
 console.log(getUsersWithEyeColor(users, "blue"));
-// [об'єкт Moore Hensley, об'єкт Sharlene Bush, об'єкт Carey Barr]
+// [array Moore Hensley, array Sharlene Bush, array Carey Barr]
